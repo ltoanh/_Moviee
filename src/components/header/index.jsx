@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Navbar from './navbar';
+import './header.scss';
 
 function Header() {
-  return (
-    <div>
-      header
-    </div>
-  )
+	return (
+		<header className="container">
+			<Navbar />
+		</header>
+	);
 }
 
-export default Header
+export default Header;

@@ -4,3 +4,8 @@ body{
   font-family: $font-family;
   font-weight: 400;
 }
+
+.container{
+  max-width: 800px;
+  margin: 0 auto;
+}
