@@ -1,8 +1,19 @@
 @use '../../../assets/styles/' as *;
 
-
 .navbar{
-  height: 80px;
+  height: $navbar-height;
+	display: flex;
+
+	& > * ~ * {
+		margin-left: 20px;
+	}
+
+	&__logo{
+		@include flex(unset, center);
+		img{
+			height: calc($navbar-height / 2);
+		}
+	}
 
   &__list {
 		height: 100%;
