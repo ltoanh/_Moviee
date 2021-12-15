@@ -28,7 +28,7 @@ export const userType = {};
 
 const movieeApi = {
 	getTrending: (type, time) => {
-		const url = `/trending/all/day`;
+		const url = `/trending/${type}/${time}`;
 		return axiosClient.get(url, {params: {}});
 		// have to params to get api_key
 	},

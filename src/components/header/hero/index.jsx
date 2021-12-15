@@ -17,7 +17,7 @@ function HeroSlide({ data }) {
 		<div className="hero">
 			<Slider {...setting}>
 				{data.map((item) => (
-					<CarouselItem item={item} />
+					<CarouselItem key={item.id} item={item} />
 				))}
 			</Slider>
 		</div>

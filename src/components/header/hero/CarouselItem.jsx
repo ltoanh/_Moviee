@@ -16,15 +16,15 @@ function CarouselItem({ item }) {
 				<h3 className="hero-item__content--title">{item.title || item.name}</h3>
 				<ul className="hero-item__content__list">
 					<li className="hero-item__content__list__item">
-						<i class="hero-item__content__list__item--icon bx bx-star"></i>
+						<i className="hero-item__content__list__item--icon bx bx-star"></i>
 						<span>{item.vote_average}</span>
 					</li>
 					<li className="hero-item__content__list__item">
-						<i class="hero-item__content__list__item--icon bx bx-user"></i>
+						<i className="hero-item__content__list__item--icon bx bx-user"></i>
 						<span>{item.vote_count}</span>
 					</li>
 					<li className="hero-item__content__list__item">
-						<i class="hero-item__content__list__item--icon bx bx-calendar"></i>
+						<i className="hero-item__content__list__item--icon bx bx-calendar"></i>
 						<span>{item.release_date || item.first_air_date}</span>
 					</li>
 				</ul>
