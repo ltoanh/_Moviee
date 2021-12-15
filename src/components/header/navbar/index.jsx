@@ -1,5 +1,6 @@
 import React from 'react'
 import './navbar.scss';
+import logo from 'assets/img/logo.svg';
 
 import { NavLink } from 'react-router-dom';
 
@@ -17,6 +18,9 @@ const navbarList = [
 function Navbar() {
   return (
     <nav className="navbar">
+			<div className="navbar__logo">
+				<img src={logo} alt="moviee logo" />
+			</div>
       <ul className="navbar__list">
 				{navbarList.map((item, idx) => (
 					<li key={idx} className="navbar__list__item">

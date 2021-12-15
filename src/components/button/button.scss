@@ -1,0 +1,53 @@
+@use '../../assets/styles/sass-utils/variables' as *;
+
+.btn{
+  font-size: 1rem;
+
+  padding: 11px 20px;
+  border-radius: $border-radius;
+
+  cursor: pointer;
+}
+
+.btn-primary{
+  color: $white;
+
+  background-color: $red-bold;
+
+  transition: all .3s ease;
+
+  &:hover{
+    box-shadow: 3px 5px 10px 3px rgba($red-bold, .5);
+  }
+}
+
+.btn-outline{
+  color: $white;
+
+  position: relative;
+
+  background-color: transparent;
+
+  &::before, &::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+
+    border: 2px solid $white;
+    border-radius: $border-radius;
+
+    transition: all .3s ease;
+  }
+
+  @media (hover: hover){
+    &:hover::before{
+      transform: translate(-3px, -3px);
+    }
+    &:hover::after{
+      transform: translate(3px, 3px);
+    }
+  }
+}
