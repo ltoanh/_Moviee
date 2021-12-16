@@ -6,6 +6,8 @@ export const imageSize = {
 };
 export const getImage = (imageSize, path) =>  prefixImage + `/${imageSize}/${path}`;
 
+export const getAvatarImage = (path) => `https://gravatar.com/avatar/${path}jpg`
+
 export const mediaType = {
 	all: 'all',
 	movie: 'movie',
