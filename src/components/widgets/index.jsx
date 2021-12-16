@@ -3,7 +3,7 @@ import './widgets.scss'
 
 function Widgets() {
   return (
-    <div className='widgets'>
+    <div className='widgets sticky'>
       right sidebar
     </div>
   )

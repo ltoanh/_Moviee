@@ -12,11 +12,19 @@ body{
 }
 
 .App{
-  @include flex(unset, unset);
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
 }
 
 .main{
   padding: 0 3rem;
-  max-width: 1440px;
-  flex: auto;
+  max-width: 1240px;
+  flex: 3;
+}
+
+.sticky{
+  position: -webkit-sticky;
+	position: sticky;
+	top: 0;
 }

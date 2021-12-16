@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import CarouselItem from './CarouselItem';
+import HeroSlider from './HeroSlider';
 import './hero.scss';
 
 const setting = {
@@ -17,7 +17,7 @@ function HeroSlide({ data }) {
 		<div className="hero">
 			<Slider {...setting}>
 				{data.map((item) => (
-					<CarouselItem key={item.id} item={item} />
+					<HeroSlider key={item.id} item={item} />
 				))}
 			</Slider>
 		</div>

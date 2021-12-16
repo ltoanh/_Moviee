@@ -12,7 +12,7 @@ function Header() {
 	useEffect(() => {
 		// call api get top rated api
 		const getPopularList = async () => {
-			let response = await movieeApi.getTrending(mediaType.all, timeWindow.week);
+			let response = await movieeApi.getTrending(mediaType.all, timeWindow[0].slug);
 			let data = response.results.slice(0, 4);
 			setMoviesList(data);
 			// console.log('get data', data);
