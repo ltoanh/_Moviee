@@ -3,13 +3,20 @@
 body{
   font-family: $font-family;
   font-weight: 400;
-}
 
-.container{
-  max-width: 1024px;
-  margin: 0 auto;
+  color: $primary;
 }
 
 .uppercase{
   text-transform: uppercase;
+}
+
+.App{
+  @include flex(unset, unset);
+}
+
+.main{
+  padding: 0 3rem;
+  max-width: 1440px;
+  flex: auto;
 }

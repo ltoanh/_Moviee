@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './navbar.scss';
 import logo from 'assets/img/logo.svg';
 
@@ -16,22 +16,28 @@ const navbarList = [
 ];
 
 function Navbar() {
-  return (
-    <nav className="navbar">
+	return (
+		<nav className="navbar">
 			<div className="navbar__logo">
-				<img src={logo} alt="moviee logo" />
+				<NavLink to="/" exact className="navbar__logo--link">
+					<img src={logo} alt="moviee logo" />
+				</NavLink>
 			</div>
-      <ul className="navbar__list">
+			<ul className="navbar__list">
 				{navbarList.map((item, idx) => (
 					<li key={idx} className="navbar__list__item">
-						<NavLink activeClassName="navbar__list__item__link__active" className="navbar__list__item__link" to={item.path}>
+						<NavLink
+							activeClassName="navbar__list__item__link__active"
+							className="navbar__list__item__link"
+							to={item.path}
+						>
 							{item.name}
 						</NavLink>
 					</li>
 				))}
 			</ul>
-    </nav>
-  )
+		</nav>
+	);
 }
 
-export default Navbar
+export default Navbar;

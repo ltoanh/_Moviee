@@ -15,14 +15,14 @@ function Header() {
 			let response = await movieeApi.getTrending(mediaType.all, timeWindow.week);
 			let data = response.results.slice(0, 4);
 			setMoviesList(data);
-			console.log('get data', data);
+			// console.log('get data', data);
 		};
 		
 		getPopularList();
 	}, []);
 	
 	return (
-		<header className="container">
+		<header>
 			<Navbar />
 			<HeroSlide data={moviesList}/>
 		</header>
