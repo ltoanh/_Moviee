@@ -3,6 +3,9 @@
 
 @forward './sass-utils/mixins';
 @forward './sass-utils/variables';
-
+// react slick
 @import "~slick-carousel/slick/slick.css"; 
 @import "~slick-carousel/slick/slick-theme.css";
+// react swiper
+@import 'swiper/swiper-bundle.min.css';
+@import 'swiper/swiper.min.css';

@@ -24,12 +24,12 @@ function Sidebar() {
 			title: 'Menu',
 			list: [
 				{
-					name: 'Home',
+					name: 'Trang chủ',
 					icon: 'bx bxs-home',
 					path: '/',
 				},
 				{
-					name: 'Discover',
+					name: 'Khám phá',
 					icon: 'bx bxs-compass',
 					path: '/discover/movie',
 				},
@@ -41,7 +41,7 @@ function Sidebar() {
 			],
 		},
 		{
-			title: 'Category',
+			title: 'Danh mục',
 			list: [
 				{
 					name: 'Movie',
@@ -56,10 +56,10 @@ function Sidebar() {
 			],
 		},
 		{
-			title: 'General',
+			title: 'Tổng quan',
 			list: [
 				{
-					name: 'Setting',
+					name: 'Cài đặt',
 					icon: 'bx bxs-network-chart',
 					path: '/setting',
 				},
@@ -68,7 +68,7 @@ function Sidebar() {
 	];
 
 	return (
-		<aside id="sidebar">
+		<aside id="sidebar" className='sticky'>
 			<SidebarHeader user={user} />
 			<div id="sidebar__content">
 				{listMenu.map((menu, i) => (
