@@ -28,16 +28,6 @@ function Sidebar() {
 					icon: 'bx bxs-home',
 					path: '/',
 				},
-				{
-					name: 'Khám phá',
-					icon: 'bx bxs-compass',
-					path: '/discover/movie',
-				},
-				{
-					name: 'Trending',
-					icon: 'bx bx-trending-up',
-					path: '/trending',
-				},
 			],
 		},
 		{

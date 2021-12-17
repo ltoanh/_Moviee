@@ -10,6 +10,7 @@ const axiosClient = axios.create({
   paramsSerializer: params => queryString.stringify({
     ...params,
     api_key: apiConfig.apiKey,
+    language: 'vi',
   })
 });
 
