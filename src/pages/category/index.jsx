@@ -1,12 +1,12 @@
 import React from 'react'
 
-function Catalog() {
+function Category() {
 
   return (
     <div>
-      catalog
+      Category
     </div>
   )
 }
 
-export default Catalog
+export default Category

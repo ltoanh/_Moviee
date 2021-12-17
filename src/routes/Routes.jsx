@@ -3,16 +3,16 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
 import Home from 'pages/home'
-import Catalog from 'pages/catalog'
+import Category from 'pages/category'
 import Account from 'pages/account'
 
 function Routes() {
 	return (
 		<Switch>
 			<Route path="/" exact component={Home} />
-			<Route path="/:category" component={Catalog} />
+			<Route path="/:category" component={Category} />
 
-			<Route path="/user/:id" component={Account} />
+			<Route path="/account/:id" component={Account} />
 		</Switch>
 	)
 }

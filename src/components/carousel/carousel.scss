@@ -88,7 +88,7 @@
 
     &__content{
       margin-top: 10px;
-      @include flex(space-between, center);
+      @include flex(space-between, unset);
 
       &__detail{
         width: 80%;
