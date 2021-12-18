@@ -1,0 +1,52 @@
+@use 'assets/styles/' as *;
+
+.page{
+  &__header{
+    position: relative;
+    height: $page-header;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border-radius: $border-radius;
+
+    @include flex(center, center);
+
+    &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      background: linear-gradient(to top, $primary, rgba($white, 0));
+
+      border-radius: inherit;
+    }
+
+    &__title{
+      color: $white;
+      font-size: 3rem;
+      text-transform: uppercase;
+      
+      z-index: 1;
+    }
+  }
+
+  &__list{
+    &__items{
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax($card-min-width, 1fr));
+  
+      margin-top: 3rem;
+    }
+
+    &__pagination{
+      margin-top: 4rem;
+      @include flex(center, center);
+    }
+  }
+}

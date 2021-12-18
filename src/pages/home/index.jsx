@@ -5,6 +5,7 @@ import './home.scss';
 
 // api
 import movieeApi, { mediaType, movieType, timeWindow, tvType } from 'api-config/moiveeApi';
+import HeroSlide from 'components/hero';
 
 function Home() {
 	const [trendingList, setTrendingList] = useState([]);
@@ -15,6 +16,21 @@ function Home() {
 
 	const [tvList, setTvList] = useState([]);
 	const [selectedTvType, setSelectedTvType] = useState(tvType[0].slug);
+
+	// store data from api
+	const [moviesList, setMoviesList] = useState([]);
+
+	useEffect(() => {
+		// call api get top rated api
+		const getPopularList = async () => {
+			let response = await movieeApi.getTrending(mediaType.all, timeWindow[0].slug);
+			let data = response.results.slice(0, 4);
+			setMoviesList(data);
+			// console.log('get data', data);
+		};
+
+		getPopularList();
+	}, []);
 
 	// get trending
 	useEffect(() => {
@@ -30,7 +46,7 @@ function Home() {
 	// get movie by type
 	useEffect(() => {
 		const getMovies = async () => {
-			let response = await movieeApi.movie.getListByType(selectedMovieType, {params: {}});
+			let response = await movieeApi.getListByType(mediaType.movie, selectedMovieType, { params: {} });
 			// console.log('home get movie: ', selectedMovieType, response);
 			setMovieList(response.results);
 		};
@@ -41,7 +57,7 @@ function Home() {
 	// get tv by type
 	useEffect(() => {
 		const getTvShows = async () => {
-			let response = await movieeApi.tv.getListByType(selectedTvType, {params: {}});
+			let response = await movieeApi.getListByType(mediaType.tv ,selectedTvType, { params: {} });
 			console.log('home get tv: ', selectedTvType, response);
 			setTvList(response.results);
 		};
@@ -51,6 +67,7 @@ function Home() {
 
 	return (
 		<div className="homepage">
+			<HeroSlide data={moviesList} />
 			<CarouselSection
 				title="Trending"
 				listItems={trendingList}

@@ -10,7 +10,7 @@ function Routes() {
 	return (
 		<Switch>
 			<Route path="/" exact component={Home} />
-			<Route path="/:category" component={Category} />
+			<Route path="/:category" component={Category} exact/>
 
 			<Route path="/account/:id" component={Account} />
 		</Switch>
