@@ -25,6 +25,12 @@ export const timeWindow = [
 	},
 ];
 
+export const catalog = {
+	'upcoming': 'upcoming',
+	'popular': 'popular',
+	'top_rated': 'top_rated',
+}
+
 export const movieType = [
 	{
 		name: 'Sắp tới',
@@ -62,18 +68,9 @@ const movieeApi = {
 		// have to params to get api_key
 	},
 
-	movie: {
-		getListByType: (type, params) => {
-			const url = `/${mediaType.movie}/${type}`;
-			return axiosClient.get(url, params);
-		},
-	},
-
-	tv: {
-		getListByType: (type, params) => {
-			const url = `/${mediaType.tv}/${type}`;
-			return axiosClient.get(url, params);
-		},
+	getListByType: (mediaType, type, params) => {
+		const url = `/${mediaType}/${type}`;
+		return axiosClient.get(url, params);
 	},
 };
 

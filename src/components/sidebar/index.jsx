@@ -51,7 +51,7 @@ function Sidebar() {
 				{
 					name: 'Cài đặt',
 					icon: 'bx bxs-network-chart',
-					path: '/setting',
+					path: '/account/guest',
 				},
 			],
 		},

@@ -1,0 +1,73 @@
+@use 'assets/styles/' as *;
+
+.card-item {
+	width: 100%;
+	max-width: $card-max-width;
+	min-width: $card-min-width;
+
+	&__poster {
+		position: relative;
+		height: 350px;
+
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-radius: $border-radius;
+
+		&__media {
+			position: absolute;
+			bottom: 3%;
+			left: 0;
+			right: 0;
+			padding: 0 1rem;
+
+			@include flex(space-between, center);
+
+			font-size: 2rem;
+			color: $white;
+
+			&--rating {
+				background-color: $white;
+
+				color: $primary;
+				font-size: 0.85rem;
+				padding: 2px 13px;
+				border-radius: 999px;
+			}
+		}
+	}
+
+	&__content {
+		margin-top: 10px;
+		@include flex(space-between, unset);
+
+		&__detail {
+			width: 80%;
+
+			&--title {
+				font-size: 1rem;
+				margin-bottom: 7px;
+			}
+			&--info {
+				@include flex(unset, center);
+				gap: 10px;
+
+				color: $secondary;
+				font-size: 0.8rem;
+
+				& > * ~ * {
+					border-left: 2px solid $red-bold;
+					text-indent: 7px;
+				}
+			}
+		}
+	}
+
+	&--reaction {
+		font-size: 1.5rem;
+		color: $secondary;
+
+		&.love {
+			color: $red-bold;
+		}
+	}
+}
