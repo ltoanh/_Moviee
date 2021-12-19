@@ -27,8 +27,14 @@ export const timeWindow = [
 
 export const catalog = {
 	'upcoming': 'upcoming',
+	'on_the_air': 'on_the_air',
+
+	'now_playing' : 'now_playing',
+	'airing_today' : 'airing_today',
+
 	'popular': 'popular',
 	'top_rated': 'top_rated',
+
 }
 
 export const movieType = [
