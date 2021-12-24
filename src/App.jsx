@@ -1,7 +1,6 @@
 import Footer from 'components/footer';
 import Header from 'components/header';
 import Sidebar from 'components/sidebar';
-import Widgets from 'components/widgets';
 
 import { BrowserRouter } from 'react-router-dom';
 import Routes from 'routes/Routes';
@@ -13,12 +12,12 @@ function App() {
 		<BrowserRouter>
 			<div className="App">
 				<Sidebar />
-				<div className="main">
-					<Header />
-					<Routes />
-					<Footer />
+				<div className="wrapper">
+					<div className="main">
+						<Header />
+						<Routes />
+					</div>
 				</div>
-				<Widgets />
 			</div>
 		</BrowserRouter>
 	);
