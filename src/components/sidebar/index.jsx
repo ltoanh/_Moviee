@@ -1,11 +1,9 @@
 import React from 'react';
 import './sidebar.scss';
 
-import SidebarHeader from './SidebarHeader';
 import SidebarList from './SidebarList/SidebarList';
 
 function Sidebar() {
-	const user = {};
 
 	const listMenu = [
 		{

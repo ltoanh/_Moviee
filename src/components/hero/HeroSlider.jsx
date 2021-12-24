@@ -30,7 +30,9 @@ function HeroSlider({ item }) {
 				</ul>
 				<p>{item.overview}</p>
 				<div className='hero-item__btns'>
-					<Link to="#">
+					<Link to={{
+						pathname: `/${item.media_type}/${item.id}`
+					}}>
 						<Button>Xem chi tiết</Button>
 						{/* link to detail page */}
 					</Link>
