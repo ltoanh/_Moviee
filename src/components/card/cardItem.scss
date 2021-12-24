@@ -54,11 +54,6 @@
 
 				color: $secondary;
 				font-size: 0.8rem;
-
-				& > * ~ * {
-					border-left: 2px solid $red-bold;
-					text-indent: 7px;
-				}
 			}
 		}
 	}
