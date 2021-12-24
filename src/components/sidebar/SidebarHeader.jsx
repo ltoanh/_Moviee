@@ -9,7 +9,7 @@ function SidebarHeader({ user }) {
 	return (
 		<div id="sidebar__header">
 			<div id="sidebar__header__image">
-				<img src={getAvatarImage(user.avatar.gravatar.hash)} alt="avatar" />
+				<img src={getAvatarImage(user.avatar.gravatar?.hash)} alt="avatar" />
 			</div>
 			<div id="sidebar__header__detail">
 				<p>

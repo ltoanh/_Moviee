@@ -12,11 +12,6 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import './detail.scss';
 
-// moment
-import moment from 'moment';
-import 'moment/locale/vi';
-moment.locale('vi'); // dinh dang thoi gian theo tieng viet
-
 function Detail() {
 	const { category, id } = useParams();
 
