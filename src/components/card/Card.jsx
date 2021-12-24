@@ -29,8 +29,8 @@ function CardItem({item, category}) {
 				<div className="card-item__content__detail">
 					<h4 className="card-item__content__detail--title">{item.title || item.name}</h4>
 					<ul className="card-item__content__detail--info">
-						<li>{item.original_language}</li>
-						<li>{item.vote_average}/10</li>
+						<li>{item.original_language}</li>{'•'}
+						<li>{item.vote_average}/10</li>{'•'}
 						<li>{item.release_date || item.first_air_date}</li>
 					</ul>
 				</div>
