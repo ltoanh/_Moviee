@@ -1,0 +1,50 @@
+@use 'assets/styles/' as *;
+
+.detail-page{
+  &__header {
+		position: relative;
+
+		height: $page-header;
+
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+
+		border-radius: $border-radius;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba($primary, 0.7);
+			border-radius: inherit;
+		}
+
+		&__content {
+			position: absolute;
+			top: 50%;
+			left: 3%;
+			width: 70%;
+			transform: translateY(-50%);
+
+			padding: 1rem 0 2rem;
+			z-index: 1;
+			color: $white;
+
+			&__title {
+				font-size: 2.5rem;
+			}
+			&__description {
+				font-size: 0.85rem;
+
+				margin-bottom: 0.5rem;
+
+				@include flex(unset, center);
+				gap: 10px;
+			}
+		}
+	}
+}
