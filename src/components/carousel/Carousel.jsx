@@ -1,10 +1,11 @@
+import Card from 'components/card/Card';
+
 import React from 'react';
 
 // swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Card from 'components/card/Card';
 
-function Carousel({ listData }) {
+function Carousel({ listData, category }) {
 	return (
 		<div className="carousel-section__content">
 			<Swiper
@@ -14,7 +15,11 @@ function Carousel({ listData }) {
 			>
 				{listData.map((item) => (
 					<SwiperSlide key={item.id}>
-						<Card item={item} />
+						{category === 'trending' ? (
+							<Card item={item} category={item.media_type} />
+						) : (
+							<Card item={item} category={category} />
+						)}
 					</SwiperSlide>
 				))}
 			</Swiper>

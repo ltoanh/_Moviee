@@ -1,0 +1,176 @@
+@use 'assets/styles/' as *;
+
+.detail-page {
+	position: relative;
+
+	&__header {
+		position: relative;
+
+		height: $page-header;
+
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+
+		border-radius: $border-radius;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba($primary, 0.7);
+			border-radius: inherit;
+		}
+
+		&__content {
+			position: absolute;
+			top: 50%;
+			left: 3%;
+			width: 70%;
+			transform: translateY(-50%);
+
+			padding: 1rem 0 2rem;
+			z-index: 1;
+			color: $white;
+
+			&__title {
+				font-size: 2.5rem;
+			}
+			&__description {
+				font-size: 0.85rem;
+
+				margin-bottom: 0.5rem;
+
+				@include flex(unset, center);
+				gap: 10px;
+			}
+		}
+	}
+
+	&__content {
+		padding: 1.5rem 0;
+		& > * ~ * {
+			margin-top: 2rem;
+		}
+	}
+	&__section {
+		& > * ~ * {
+			margin-top: 0.75rem;
+		}
+	}
+
+	&__credits {
+		display: grid;
+		gap: 30px;
+		grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+
+		margin: 1rem 0;
+
+		&__item {
+			@include flex(unset, center);
+			gap: 20px;
+			img {
+				display: block;
+				width: 100%;
+				max-width: 100px;
+				height: 100px;
+				border-radius: 999px;
+				object-fit: cover;
+			}
+			&--original-name {
+				font-size: 1.2rem;
+			}
+			&--character {
+				color: $secondary;
+				font-size: 0.8rem;
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+.production_companies{
+	@include flex(space-between, center);
+	flex-wrap: wrap;
+
+	&__item{
+		display: block;
+		object-fit: cover;
+	}
+}
+
+.genres__list {
+	@include flex(unset, center);
+
+	font-size: 0.75rem;
+	color: $white;
+	width: 80%;
+
+	gap: 7px;
+	flex-wrap: wrap;
+
+	z-index: 1;
+
+	&__item {
+		border-radius: 999px;
+
+		padding: 5px 7px;
+
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+
+			background-color: currentColor;
+			opacity: 0.5;
+
+			border-radius: inherit;
+		}
+	}
+}
+
+.reviews {
+	& > * ~ * {
+		margin-top: 2rem;
+	}
+	.review__item {
+		& > * ~ * {
+			margin-top: 0.5rem;
+		}
+
+		&__header {
+			@include flex(unset, center);
+			gap: 10px;
+			img {
+				display: block;
+				height: 50px;
+				width: 50px;
+				object-fit: cover;
+
+				border-radius: 999px;
+			}
+
+			&__detail {
+				&--name {
+					font-size: 1rem;
+				}
+				&--date {
+					font-size: 0.8rem;
+					color: $secondary;
+				}
+			}
+		}
+
+		&__content{
+			max-width: 100%;
+		}
+	}
+}

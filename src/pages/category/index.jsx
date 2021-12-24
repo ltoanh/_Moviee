@@ -58,7 +58,7 @@ function Category() {
 			<div className={categoryStyles.page__list}>
 				<div className={categoryStyles.page__list__items}>
 					{dataList.map((item) => (
-						<CardItem item={item} key={item.id} />
+						<CardItem category={category} item={item} key={item.id} />
 					))}
 				</div>
 				<div className={categoryStyles.page__list__pagination}>

@@ -87,7 +87,7 @@ function CarouselSection({ title, category }) {
 		<section className="carousel-section">
 			<div className="carousel-section__header">
 				<div className="carousel-section__header--left">
-					<h3 className="carousel-section__title">{title}</h3>
+					<h3 className="section-title">{title}</h3>
 					<div ref={selectorRef} className="carousel-section__selection">
 						{selectorList.map((item, i) => {
 							let selectedItem = selected === item.slug ? `selected` : ``;
@@ -112,7 +112,7 @@ function CarouselSection({ title, category }) {
 					<OutlineButton className="small btn-outline-primary">Xem thêm</OutlineButton>
 				</Link>
 			</div>
-			<Carousel listData={listData} />
+			<Carousel listData={listData} category={category}/>
 		</section>
 	);
 }

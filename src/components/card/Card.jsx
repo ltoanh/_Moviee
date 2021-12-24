@@ -2,10 +2,15 @@ import React from 'react';
 import './cardItem.scss';
 
 import { getImage, imageSize } from 'api-config/moiveeApi';
+import { Link } from 'react-router-dom';
 
-function CardItem({item}) {
+function CardItem({item, category}) {
+	const pathnameURI = `/${category}/${item.id}`;
 	return (
-		<div className="card-item">
+		<Link to={{
+			pathname: pathnameURI,
+		}}>
+			<div className="card-item">
 			<div
 				style={{
 					backgroundImage: `url(${getImage(
@@ -34,6 +39,7 @@ function CardItem({item}) {
 				</div>
 			</div>
 		</div>
+		</Link>
 	);
 }
 

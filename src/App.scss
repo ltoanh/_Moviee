@@ -1,32 +1,50 @@
 @use './assets/styles/' as *;
 
-body{
-  font-family: $font-family;
-  font-weight: 400;
+body {
+	font-family: $font-family;
+	font-weight: 400;
 
-  color: $primary;
-  background-color: $white;
+	color: $primary;
+	background-color: $white;
 }
 
-.uppercase{
-  text-transform: uppercase;
+.uppercase {
+	text-transform: uppercase;
 }
 
-.App{
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
+.App {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
 }
 
-.main{
-  padding: 0 3rem;
-  max-width: 1240px;
-  width: 100%;
-  flex: 3;
+.wrapper {
+	display: flex;
+	justify-content: center;
+	flex: 3;
 }
 
-.sticky{
-  position: -webkit-sticky;
+.main {
+	padding: 0 3rem;
+	max-width: 1240px;
+	width: 100%;
+	flex: 3;
+}
+
+.sticky {
+	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
+}
+
+.bx.bxs-star{
+	color: $yellow;
+}
+
+.section-title {
+	text-transform: uppercase;
+	font-size: 1.5rem;
+
+	border-left: 5px solid $red-bold;
+	padding-left: 1rem;
 }
