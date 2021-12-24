@@ -31,7 +31,9 @@ function CarouselSection({ title, category }) {
 				case 'movie':
 					// case movie
 					let selectedMovieType = selected || movieType[0].slug;
-					let responseMovie = await movieeApi.getListByType(mediaType.movie, selectedMovieType, { params });
+					let responseMovie = await movieeApi.getListByType(mediaType.movie, selectedMovieType, {
+						params,
+					});
 
 					setSelected(selectedMovieType);
 					setSelectorList(movieType);
@@ -40,7 +42,7 @@ function CarouselSection({ title, category }) {
 					break;
 				case 'tv':
 					let selectedTvType = selected || tvType[0].slug;
-					let responseTv = await movieeApi.getListByType(mediaType.tv, selectedTvType, {params});
+					let responseTv = await movieeApi.getListByType(mediaType.tv, selectedTvType, { params });
 
 					setSelected(selectedTvType);
 					setSelectorList(tvType);
@@ -104,15 +106,17 @@ function CarouselSection({ title, category }) {
 						})}
 					</div>
 				</div>
-				<Link
-					to={{
-						pathname: `/${category}`,
-					}}
-				>
-					<OutlineButton className="small btn-outline-primary">Xem thêm</OutlineButton>
-				</Link>
+				{category !== 'trending' && (
+					<Link
+						to={{
+							pathname: `/${category}`,
+						}}
+					>
+						<OutlineButton className="small btn-outline-primary">Xem thêm</OutlineButton>
+					</Link>
+				)}
 			</div>
-			<Carousel listData={listData} category={category}/>
+			<Carousel listData={listData} category={category} />
 		</section>
 	);
 }
