@@ -1,0 +1,39 @@
+@use 'assets/styles/' as *;
+
+.reviews {
+	& > * ~ * {
+		margin-top: 2rem;
+	}
+	.review__item {
+		& > * ~ * {
+			margin-top: 0.5rem;
+		}
+
+		&__header {
+			@include flex(unset, center);
+			gap: 10px;
+			img {
+				display: block;
+				height: 50px;
+				width: 50px;
+				object-fit: cover;
+
+				border-radius: 999px;
+			}
+
+			&__detail {
+				&--name {
+					font-size: 1rem;
+				}
+				&--date {
+					font-size: 0.8rem;
+					color: $secondary;
+				}
+			}
+		}
+
+		&__content{
+			max-width: 100%;
+		}
+	}
+}
