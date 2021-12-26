@@ -55,7 +55,7 @@ function Detail() {
 		let response = await movieeApi.getReviews(category, id, { params });
 		setReviews([...reviews, ...response.results]);
 		setReviewsTotalPage(response.total_pages);
-		console.log('reviews', response);
+		// console.log('reviews', response);
 	};
 	// load more reviews
 	const handleClickLoadMoreReviews = () => {

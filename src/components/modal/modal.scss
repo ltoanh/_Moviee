@@ -1,0 +1,57 @@
+@use 'assets/styles/' as *;
+
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	transform: translate(-50%, -50%);
+
+	background-color: rgba($secondary, 0.9);
+
+	z-index: 99;
+
+	border-radius: $border-radius;
+
+	opacity: 0;
+	visibility: hidden;
+
+	transition: all 0.3s ease;
+}
+
+.modal.active {
+	width: 70%;
+	height: 600px;
+
+	visibility: visible;
+	opacity: 1;
+}
+
+.modal__content {
+	position: relative;
+	height: 100%;
+	width: 100%;
+
+	border-radius: inherit;
+
+	color: $white;
+
+	&__close {
+		font-size: 2rem;
+		position: absolute;
+		top: .5rem;
+    right: .5rem;
+
+    cursor: pointer;
+	}
+
+	iframe {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 90%;
+		height: 90%;
+		transform: translate(-50%, -50%);
+	}
+}
