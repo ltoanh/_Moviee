@@ -1,8 +1,6 @@
 
 # MOVIEE
-project to learn React.js, Redux Toolkit
-
-call themoviedb API
+project to learn React.js, Redux Toolkit, API
 
 ## Features
 
@@ -27,7 +25,16 @@ Install shopamaee with npm
   npm install
   yarn start
 ```
-    
+
+## Lessons Learned
+
+- React hooks
+- create SPA with React router v5
+- using Scss in React.js
+- using Redux Toolkit to store state
+- using axios to call API
+- using libs: swiper, react-slick, moment, etc.
+
 ## Contributing
 
 Contributions are always welcome!
