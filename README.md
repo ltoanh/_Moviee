@@ -1,6 +1,8 @@
 
 # MOVIEE
-project to learn React.js, Redux Toolkit, call API
+project to learn React.js, Redux Toolkit
+
+call themoviedb API
 
 ## Features
 
