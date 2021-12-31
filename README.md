@@ -1,15 +1,33 @@
-# MOVIEE
 
-Project using API from The Movie Database:
-```text
-https://developers.themoviedb.org/3
-```
+# MOVIEE
+project to learn React.js, Redux Toolkit, call API
+
 ## Features
 
-## Using
-- Scss to style 
-- React router v5 to make SPA
-- Axios to call themoviedb API
-- React Slick, Swiper.js to make slider vs carousel
-- Material UI to create pagination
-- moment to format date
+- show movies list and movie detail
+
+
+## Tech Stack
+
+**Client:** React, Redux Toolkit
+
+**Server:** TheMovieDb
+
+
+## Demo
+
+https://moviee.vercel.app/
+## Installation
+
+Install shopamaee with npm
+
+```bash
+  npm install
+  yarn start
+```
+    
+## Contributing
+
+Contributions are always welcome!
+
+
