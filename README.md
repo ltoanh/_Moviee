@@ -19,7 +19,7 @@ project to learn React.js, Redux Toolkit, API
 https://moviee.vercel.app/
 ## Installation
 
-Install shopamaee with npm
+Install with npm
 
 ```bash
   npm install
