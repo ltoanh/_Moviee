@@ -1,11 +1,8 @@
-import React from 'react';
-
-import { Route, Switch } from 'react-router-dom';
-
-import Home from 'pages/home';
 import Category from 'pages/category';
 import Detail from 'pages/detail';
-import Login from 'pages/login';
+import Home from 'pages/home';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 
 function Routes() {
 	return (
