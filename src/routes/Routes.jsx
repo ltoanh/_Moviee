@@ -11,17 +11,8 @@ function Routes() {
 	return (
 		<Switch>
 			<Route path="/" exact component={Home} />
-			<Route
-				path="/:category"
-				render={(props) => {
-					if(props.location.pathname !== '/login'){
-						return <Category />
-					} else {
-						return <Login />
-					}
-				}}
-			/>
-			<Route path="/:category/:id" component={Detail} />
+			<Route exact path="/:category" component={Category} />
+			<Route path="/:category/:id" exact component={Detail} />
 
 			{/* <Route path="/account/:id" component={Account} exact/> */}
 		</Switch>
