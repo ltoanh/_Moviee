@@ -12,9 +12,9 @@ export const imageSize = {
 };
 export const getImage = (imageSize, path) => {
 	if (path) {
-		if(path.includes('http')){
-			return path.slice(1,);
-		}	
+		if (path.includes('http')) {
+			return path.slice(1);
+		}
 		return prefixImage + `/${imageSize}/${path}`;
 	} else {
 		return defaultAvatarImageURL;
@@ -22,9 +22,9 @@ export const getImage = (imageSize, path) => {
 };
 
 export const getAvatarImage = (path) => {
-	if(path.includes('http')){
-		return path.slice(1,);
-	}	
+	if (path.includes('http')) {
+		return path.slice(1);
+	}
 	return `https://gravatar.com/avatar/${path}jpg`;
 };
 
@@ -101,6 +101,30 @@ export const tvType = [
 ];
 
 const movieeApi = {
+	/*
+	user: {
+		login: async (username, password) => {
+			// create request token
+			let requestTokenUrl = '/authentication/token/new';
+
+			let requestToken = await axiosClient.get(requestTokenUrl, { params: {} });
+
+			// get permission
+			await axios.get('https://www.themoviedb.org/authenticate/' + requestToken.request_token + "?redirect_to=http://www.localhost:3000/approved");
+			// bug here
+
+			// create request token with login
+			let url = '/authentication/token/validate_with_login';
+			let data = {
+				username: username,
+				password: password,
+				request_token: requestToken.request_token,
+			};
+			return axiosClient.post(url, data, { params: {} });
+		},
+	},
+	*/
+
 	getTrending: (type, time) => {
 		const url = `/trending/${type}/${time}`;
 		return axiosClient.get(url, { params: {} });
