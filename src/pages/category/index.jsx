@@ -28,7 +28,7 @@ function Category() {
 			setDataList(response.results);
 			setTotalPage(response.total_pages);
 
-			console.log('data list: ', category, response);
+			// console.log('data list: ', category, response);
 		};
 
 		getDataList();

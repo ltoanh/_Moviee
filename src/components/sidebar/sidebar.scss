@@ -10,7 +10,7 @@
 	height: 100vh;
 	padding: 1rem 1.5rem;
 
-	border-right: 2px solid rgba($color: $gray-light, $alpha: 0.3);
+	border-right: 2px solid rgba($color: $secondary, $alpha: 0.3);
 
 	&__header {
 		@include flex(unset, center);

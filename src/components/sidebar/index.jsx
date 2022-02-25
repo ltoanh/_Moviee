@@ -8,6 +8,7 @@ function Sidebar() {
 	const listMenu = [
 		{
 			title: 'Menu',
+			key: 'menu',
 			list: [
 				{
 					name: 'Trang chủ',
@@ -18,6 +19,7 @@ function Sidebar() {
 		},
 		{
 			title: 'Danh mục',
+			key: 'catalog',
 			list: [
 				{
 					name: 'Movie',
@@ -31,16 +33,17 @@ function Sidebar() {
 				},
 			],
 		},
-		// {
-		// 	title: 'Tổng quan',
-		// 	list: [
-		// 		{
-		// 			name: 'Cài đặt',
-		// 			icon: 'bx bxs-network-chart',
-		// 			path: '/account/guest',
-		// 		},
-		// 	],
-		// },
+		{
+			title: 'Tổng quan',
+			key: 'general',
+			list: [
+				{
+					name: 'Đăng nhập',
+					icon: 'bx bxs-network-chart',
+					path: '/login',
+				},
+			],
+		},
 	];
 
 	return (
