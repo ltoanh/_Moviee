@@ -1,6 +1,6 @@
 
 # MOVIEE
-project to learn React.js, Redux Toolkit, API
+review films website
 
 ## Features
 
