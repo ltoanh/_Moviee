@@ -33,17 +33,17 @@ function Sidebar() {
 				},
 			],
 		},
-		{
-			title: 'Tổng quan',
-			key: 'general',
-			list: [
-				{
-					name: 'Đăng nhập',
-					icon: 'bx bxs-network-chart',
-					path: '/login',
-				},
-			],
-		},
+		// {
+		// 	title: 'Tổng quan',
+		// 	key: 'general',
+		// 	list: [
+		// 		{
+		// 			name: 'Đăng nhập',
+		// 			icon: 'bx bxs-network-chart',
+		// 			path: '/login',
+		// 		},
+		// 	],
+		// },
 	];
 
 	return (
