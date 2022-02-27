@@ -47,4 +47,10 @@ body {
 
 	border-left: 5px solid $red-bold;
 	padding-left: 1rem;
+
+	@media screen and (max-width: 768px){
+		border-left-color: transparent;
+		border-bottom: 5px solid $red-bold;
+		padding: .5rem 1rem;
+	}
 }

@@ -10,6 +10,15 @@
       @include flex(unset, center);
       gap: 25px;
     }
+
+    @media screen and (max-width: 768px){
+      flex-direction: column;
+
+      &--left{
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+      }
+    }
   }
 
   &__selection{
@@ -46,17 +55,34 @@
   & > * ~ * {
     margin-top: 10px;
   }
+
+	width: 320px;
+
+	@media screen and (min-width: 320px){
+		width: 320px;
+	}
+
+	@media screen and (min-width: 560px){
+		width: 560px;
+	}
+
+	@media screen and (min-width: 768px){
+		width: 768px;
+	}
+
+	@media screen and (min-width: 1024px){
+		width: 1024px;
+	}
 }
 .swiper-wrapper{
   padding: 1.5rem 0 1.75rem;
 }
 .swiper-scrollbar{
-  height: 7px;
-  cursor: grabbing;
+  height: 7px
 }
-.swiper-slide{
-  width: auto;
-}
-.swiper-scrollbar-drag{
-  width: 200px;
-}
+// .swiper-slide{
+//   width: auto;
+// }
+// .swiper-scrollbar-drag{
+//   width: 200px !important;
+// }
