@@ -1,7 +1,6 @@
 @use 'assets/styles/' as *;
 
 #sidebar {
-	display: none;
 	max-width: $sidebar-max-width;
 	min-width: $sidebar-min-width;
 	width: 100%;
@@ -12,6 +11,10 @@
 	padding: 1rem 1.5rem;
 
 	border-right: 2px solid rgba($color: $secondary, $alpha: 0.3);
+
+	@media screen and (max-width: 960px) {
+		display: none;
+	}
 
 	&__header {
 		@include flex(unset, center);
