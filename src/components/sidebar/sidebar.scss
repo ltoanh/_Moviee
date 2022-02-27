@@ -1,6 +1,7 @@
 @use 'assets/styles/' as *;
 
 #sidebar {
+	display: none;
 	max-width: $sidebar-max-width;
 	min-width: $sidebar-min-width;
 	width: 100%;
